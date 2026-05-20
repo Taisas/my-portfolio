@@ -57,8 +57,8 @@ const projects = [
     ],
     bg: "linear-gradient(135deg,#deded8,#cacac2)",
     accent: "#444441",
-    desc: "個人所有のレコードカタログサイト。レコード情報はMicroCMSに置かれていてAPIを介して取得しています。レコード詳細表示時はパッケージ画像のエッフェクトとオーディオの周波数をシェーダーを介して連携しています。ビルドはVite、デプロイはVircel。",
-    tags: ["JavaScript", "WebGL", "WebAudio API", "Vite", "gsap", "MicroCMS", "Vircel"],
+    desc: "個人所有のレコードカタログサイト。レコード情報はMicroCMSに置かれていてAPIを介して取得しています。レコード詳細表示時はパッケージ画像のエフェクトとオーディオの周波数をシェーダーを介して連携しています。ビルドはVite、デプロイはVercel。",
+    tags: ["JavaScript", "WebGL", "WebAudio API", "Vite", "gsap", "MicroCMS", "Vercel"],
     features: [
       { icon: "ti-refresh", label: "リアルタイム3Dレンダリング" },
       { icon: "ti-device-desktop", label: "ヘッドレスCMS連携" }
@@ -95,7 +95,7 @@ const projects = [
     ],
     bg: "linear-gradient(135deg,#e0e0da,#ccccc4)",
     accent: "#444441",
-    desc: "セブンイレブン麺フェスページです。デザインとコーディングを担当しています。煙の表現にこだわったサイトとなっています。",
+    desc: "セブンイレブン麺フェスページです。デザインとコーディングを担当しています。湯気の表現にこだわったサイトとなっています。",
     tags: ["JavaScript"],
     features: [
       { icon: "ti-device-desktop", label: "レスポンシブ" }
@@ -114,6 +114,24 @@ const projects = [
     bg: "linear-gradient(135deg,#dcdcd6,#c8c8c0)",
     accent: "#5f5e5a",
     desc: "セブンイレブンと刀剣乱舞のコラボページです。デザインとコーディングを担当しています。アニメーションを使用してリッチなサイトにしています。",
+    tags: ["JavaScript"],
+    features: [
+    ],
+    url: "#"
+  },
+  {
+    title: "セブンイレブンxサンリオキャンペーンサイト",
+    tag: "LP",
+    icon: "ti-map",
+    thumb: "images/thumb_07.webp",
+    thumbs: [
+      "images/detail_7_1.webp",
+      "images/detail_7_2.webp",
+      "images/detail_7_3.webp"
+    ],
+    bg: "linear-gradient(135deg,#dcdcd6,#c8c8c0)",
+    accent: "#5f5e5a",
+    desc: "セブンイレブンとサンリオのコラボページです。デザインとコーディングを担当しています。アニメーションを使用してリッチなサイトにしています。",
     tags: ["JavaScript"],
     features: [
     ],
