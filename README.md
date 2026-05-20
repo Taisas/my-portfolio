@@ -10,13 +10,16 @@ GitHub Pages でホストするポートフォリオサイト。
 
 ```
 my-portfolio/
-├── index.html          # HTML構造（CSS・JSを外部ファイルで読み込み）
+├── index.html               # HTML構造（CSS・JSを外部ファイルで読み込み）
 ├── css/
-│   └── style.css       # 全スタイル定義
+│   └── style.css            # 全スタイル定義
 ├── js/
-│   └── main.js         # プロジェクトデータ・インタラクション処理
-└── images/
-    └── .gitkeep        # imagesフォルダをGit管理に含めるための空ファイル
+│   └── main.js              # プロジェクトデータ・インタラクション処理
+├── images/
+│   ├── thumb_01〜06.webp    # カードサムネイル画像
+│   ├── detail_*_*.webp      # モーダルカルーセル用詳細画像
+│   └── .gitkeep
+└── .gitignore               # .DS_Store を除外
 ```
 
 ---
@@ -32,8 +35,10 @@ my-portfolio/
 const PASSWORD = "your_password";
 ```
 
+### 全体背景
+- `body` にモノクロのグラデーションを適用（`#ededea → #ccccc4 → #a8a89e`、135度方向）
+
 ### ポートフォリオグリッド
-- モノクログラデーション背景（`#f5f5f3 → #d6d6d0`）
 - `auto-fill` グリッドによるレスポンシブなタイル表示
 - カードホバー時に浮き上がるアニメーション
 - サムネイル画像が存在しない場合はアイコンにフォールバック
@@ -42,6 +47,7 @@ const PASSWORD = "your_password";
 - カード選択でプロジェクト詳細をモーダル表示
 - 開閉時にフェード＋スケールアニメーション（0.25s）
 - 閉じ方：✕ボタン／背景クリック／Escキー
+- `url` が `"#"` または空の場合、「サイトを見る」ボタンを非表示
 
 ### カルーセル（複数画像対応）
 - プロジェクトに `thumbs` 配列（2枚以上）を設定するとモーダル内がカルーセルになる
@@ -51,9 +57,9 @@ const PASSWORD = "your_password";
 ```js
 // 複数画像の設定例
 thumbs: [
-  "images/echo-dashboard.png",
-  "images/echo-dashboard-2.png",
-  "images/echo-dashboard-3.png"
+  "images/detail_1_1.webp",
+  "images/detail_1_2.webp",
+  "images/detail_1_3.webp"
 ]
 ```
 
