@@ -12,7 +12,7 @@
 
 body {
   font-family: var(--font-sans);
-  background: #f0f0ec;
+  background: linear-gradient(135deg, #ededea 0%, #ccccc4 45%, #a8a89e 100%);
   min-height: 100vh;
   padding: 2rem;
 }
