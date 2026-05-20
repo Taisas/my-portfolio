@@ -44,7 +44,7 @@ const projects = [
       { icon: "ti-refresh", label: "リアルタイム3Dレンダリング" },
       { icon: "ti-device-desktop", label: "レスポンシブ" }
     ],
-    url: "#"
+    url: "https://taisas.github.io/portfolio2/"
   },
   {
     title: "個人所蔵レコードカタログサイト",
@@ -58,31 +58,29 @@ const projects = [
     bg: "linear-gradient(135deg,#deded8,#cacac2)",
     accent: "#444441",
     desc: "ヘッドレスCMSと連携したコンテンツ管理システム。マークダウンエディタとドラッグ&ドロップによるレイアウト編集を備えています。",
-    tags: ["JavaScript", "WebGL", "WebAudio API", "Webpack", "gsap"],
+    tags: ["JavaScript", "WebGL", "WebAudio API", "Vite", "gsap", "MicroCMS", "Vircel"],
     features: [
-      { icon: "ti-markdown", label: "Markdownエディタ" },
-      { icon: "ti-drag-drop", label: "D&Dレイアウト" },
-      { icon: "ti-users", label: "マルチユーザー" },
-      { icon: "ti-history", label: "バージョン管理" }
+      { icon: "ti-refresh", label: "リアルタイム3Dレンダリング" },
+      { icon: "ti-device-desktop", label: "ヘッドレスCMS連携" }
     ],
     url: "https://tais-record-v2.vercel.app/"
   },
   {
-    title: "Lumina Store",
-    tag: "E-Commerce",
+    title: "万博 セブンイレブン未来型店舗サイト",
+    tag: "LP",
     icon: "ti-shopping-bag",
-    thumb: "images/lumina-store.png",
+    thumb: "images/thumb_03.webp",
+    thumbs: [
+      "images/detail_3_1.webp",
+      "images/detail_3_2.webp"
+    ],
     bg: "linear-gradient(135deg,#e4e4df,#d0d0c8)",
     accent: "#5f5e5a",
     desc: "ミニマルなデザインのECサイト。スムーズなアニメーションと直感的なカート操作で、購買体験を向上させています。",
-    tags: ["Vue.js", "Stripe", "Node.js"],
+    tags: ["JavaScript"],
     features: [
-      { icon: "ti-credit-card", label: "Stripe決済" },
-      { icon: "ti-search", label: "商品検索" },
-      { icon: "ti-heart", label: "お気に入り" },
-      { icon: "ti-truck", label: "配送管理" }
     ],
-    url: "#"
+    url: ""
   },
   {
     title: "Pulse Social",
@@ -217,7 +215,13 @@ function openModal(p) {
   document.getElementById("mFeatures").innerHTML = p.features.map(f =>
     `<div class="feature-item"><i class="ti ${f.icon}" aria-hidden="true"></i>${f.label}</div>`
   ).join("");
-  document.getElementById("mLink").href = p.url;
+  const mLink = document.getElementById("mLink");
+  if (p.url && p.url !== "#") {
+    mLink.href = p.url;
+    mLink.style.display = "";
+  } else {
+    mLink.style.display = "none";
+  }
 
   overlay.classList.add("open");
   closeBtn.focus();
