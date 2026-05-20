@@ -1,3 +1,30 @@
+// Password protection
+const PASSWORD = "your_password";
+const SESSION_KEY = "portfolio_auth";
+
+const authScreen = document.getElementById("authScreen");
+const authForm = document.getElementById("authForm");
+const authInput = document.getElementById("authInput");
+const authError = document.getElementById("authError");
+
+if (sessionStorage.getItem(SESSION_KEY) === "1") {
+  authScreen.classList.add("hidden");
+} else {
+  authInput.focus();
+}
+
+authForm.addEventListener("submit", e => {
+  e.preventDefault();
+  if (authInput.value === PASSWORD) {
+    sessionStorage.setItem(SESSION_KEY, "1");
+    authScreen.classList.add("hidden");
+  } else {
+    authError.textContent = "パスワードが正しくありません";
+    authInput.value = "";
+    authInput.focus();
+  }
+});
+
 const projects = [
   {
     title: "Echo Dashboard",
