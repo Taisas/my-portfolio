@@ -27,43 +27,45 @@ authForm.addEventListener("submit", e => {
 
 const projects = [
   {
-    title: "Echo Dashboard",
-    tag: "Data Visualization",
+    title: "個人サイト",
+    tag: "portfolio",
     icon: "ti-chart-bar",
-    thumb: "images/echo-dashboard.png",
+    thumb: "images/thumb_01.webp",
     thumbs: [
-      "images/echo-dashboard.png",
-      "images/echo-dashboard-2.png",
-      "images/echo-dashboard-3.png"
+      "images/detail_1_1.webp",
+      "images/detail_1_2.webp",
+      "images/detail_1_3.webp"
     ],
     bg: "linear-gradient(135deg,#e8e8e4,#d6d6d0)",
     accent: "#5f5e5a",
     desc: "リアルタイムデータを美しく可視化するダッシュボードアプリ。D3.jsとWebSocketを使用し、KPIの変動を秒単位で追跡できます。",
-    tags: ["JavaScript", "D3.js", "WebSocket"],
+    tags: ["JavaScript", "WebGL", "WebAudio API", "Webpack", "gsap"],
     features: [
-      { icon: "ti-refresh", label: "リアルタイム更新" },
-      { icon: "ti-chart-line", label: "インタラクティブグラフ" },
-      { icon: "ti-device-desktop", label: "レスポンシブ" },
-      { icon: "ti-filter", label: "カスタムフィルター" }
+      { icon: "ti-refresh", label: "リアルタイム3Dレンダリング" },
+      { icon: "ti-device-desktop", label: "レスポンシブ" }
     ],
     url: "#"
   },
   {
-    title: "Folio CMS",
-    tag: "Content Management",
+    title: "個人所蔵レコードカタログサイト",
+    tag: "portfolio",
     icon: "ti-file-text",
-    thumb: "images/folio-cms.png",
+    thumb: "images/thumb_02.webp",
+    thumbs: [
+      "images/detail_2_1.webp",
+      "images/detail_2_2.webp"
+    ],
     bg: "linear-gradient(135deg,#deded8,#cacac2)",
     accent: "#444441",
     desc: "ヘッドレスCMSと連携したコンテンツ管理システム。マークダウンエディタとドラッグ&ドロップによるレイアウト編集を備えています。",
-    tags: ["React", "Headless CMS", "REST API"],
+    tags: ["JavaScript", "WebGL", "WebAudio API", "Webpack", "gsap"],
     features: [
       { icon: "ti-markdown", label: "Markdownエディタ" },
       { icon: "ti-drag-drop", label: "D&Dレイアウト" },
       { icon: "ti-users", label: "マルチユーザー" },
       { icon: "ti-history", label: "バージョン管理" }
     ],
-    url: "#"
+    url: "https://tais-record-v2.vercel.app/"
   },
   {
     title: "Lumina Store",
