@@ -148,7 +148,7 @@ const projects = [
     ],
     bg: "linear-gradient(135deg,#dcdcd6,#c8c8c0)",
     accent: "#5f5e5a",
-    desc: "メーカータイアップページ記事ページに埋め込む商品3Dビューアーです。商品の3Dモデルを360°閲覧することが出来ます。",
+    desc: "メーカータイアップ記事ページに埋め込む商品3Dビューアーです。商品の3Dモデルを360°閲覧することが出来ます。",
     tags: ["JavaScript", "WebGl", "Three JS"],
     features: [
       { icon: "ti-refresh", label: "リアルタイム3Dレンダリング" }
