@@ -31,6 +31,11 @@ const projects = [
     tag: "Data Visualization",
     icon: "ti-chart-bar",
     thumb: "images/echo-dashboard.png",
+    thumbs: [
+      "images/echo-dashboard.png",
+      "images/echo-dashboard-2.png",
+      "images/echo-dashboard-3.png"
+    ],
     bg: "linear-gradient(135deg,#e8e8e4,#d6d6d0)",
     accent: "#5f5e5a",
     desc: "リアルタイムデータを美しく可視化するダッシュボードアプリ。D3.jsとWebSocketを使用し、KPIの変動を秒単位で追跡できます。",
@@ -190,13 +195,15 @@ function openModal(p) {
   mHero.style.background = p.bg;
   mHero.innerHTML = "";
 
-  if (p.thumb) {
+  const images = p.thumbs && p.thumbs.length > 1 ? p.thumbs : (p.thumb ? [p.thumb] : []);
+
+  if (images.length > 1) {
+    buildCarousel(mHero, images, p);
+  } else if (images.length === 1) {
     const img = document.createElement("img");
-    img.src = p.thumb;
+    img.src = images[0];
     img.alt = p.title;
-    img.addEventListener("error", () => {
-      img.replaceWith(createHeroFallback(p));
-    });
+    img.addEventListener("error", () => img.replaceWith(createHeroFallback(p)));
     mHero.appendChild(img);
   } else {
     mHero.appendChild(createHeroFallback(p));
@@ -212,6 +219,65 @@ function openModal(p) {
 
   overlay.classList.add("open");
   closeBtn.focus();
+}
+
+function buildCarousel(container, images, p) {
+  let current = 0;
+
+  const carousel = document.createElement("div");
+  carousel.className = "carousel";
+
+  const track = document.createElement("div");
+  track.className = "carousel-track";
+
+  const slides = images.map((src, i) => {
+    const slide = document.createElement("div");
+    slide.className = "carousel-slide";
+
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = `${p.title} ${i + 1}`;
+    img.addEventListener("error", () => img.replaceWith(createHeroFallback(p)));
+    slide.appendChild(img);
+    track.appendChild(slide);
+    return slide;
+  });
+
+  const btnPrev = document.createElement("button");
+  btnPrev.className = "carousel-btn carousel-btn-prev";
+  btnPrev.setAttribute("aria-label", "前の画像");
+  btnPrev.innerHTML = `<i class="ti ti-chevron-left"></i>`;
+
+  const btnNext = document.createElement("button");
+  btnNext.className = "carousel-btn carousel-btn-next";
+  btnNext.setAttribute("aria-label", "次の画像");
+  btnNext.innerHTML = `<i class="ti ti-chevron-right"></i>`;
+
+  const dots = document.createElement("div");
+  dots.className = "carousel-dots";
+  const dotEls = images.map((_, i) => {
+    const d = document.createElement("button");
+    d.className = "carousel-dot" + (i === 0 ? " active" : "");
+    d.setAttribute("aria-label", `画像 ${i + 1}`);
+    d.addEventListener("click", () => goTo(i));
+    dots.appendChild(d);
+    return d;
+  });
+
+  function goTo(index) {
+    current = (index + images.length) % images.length;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dotEls.forEach((d, i) => d.classList.toggle("active", i === current));
+  }
+
+  btnPrev.addEventListener("click", () => goTo(current - 1));
+  btnNext.addEventListener("click", () => goTo(current + 1));
+
+  carousel.appendChild(track);
+  carousel.appendChild(btnPrev);
+  carousel.appendChild(btnNext);
+  carousel.appendChild(dots);
+  container.appendChild(carousel);
 }
 
 function createHeroFallback(p) {
