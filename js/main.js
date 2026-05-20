@@ -38,7 +38,7 @@ const projects = [
     ],
     bg: "linear-gradient(135deg,#e8e8e4,#d6d6d0)",
     accent: "#5f5e5a",
-    desc: "リアルタイムデータを美しく可視化するダッシュボードアプリ。D3.jsとWebSocketを使用し、KPIの変動を秒単位で追跡できます。",
+    desc: "個人の紹介のためのポートフォリオサイト。スクロールに応じてエッフェクトが変わるような演出を実装しています。オーディオファイルをリアルタイムに解析して周波数とシェーダーのパラメーターを同期させています。",
     tags: ["JavaScript", "WebGL", "WebAudio API", "Webpack", "gsap"],
     features: [
       { icon: "ti-refresh", label: "リアルタイム3Dレンダリング" },
@@ -57,7 +57,7 @@ const projects = [
     ],
     bg: "linear-gradient(135deg,#deded8,#cacac2)",
     accent: "#444441",
-    desc: "ヘッドレスCMSと連携したコンテンツ管理システム。マークダウンエディタとドラッグ&ドロップによるレイアウト編集を備えています。",
+    desc: "個人所有のレコードカタログサイト。レコード情報はMicroCMSに置かれていてAPIを介して取得しています。レコード詳細表示時はパッケージ画像のエッフェクトとオーディオの周波数をシェーダーを介して連携しています。ビルドはVite、デプロイはVircel。",
     tags: ["JavaScript", "WebGL", "WebAudio API", "Vite", "gsap", "MicroCMS", "Vircel"],
     features: [
       { icon: "ti-refresh", label: "リアルタイム3Dレンダリング" },
@@ -76,60 +76,64 @@ const projects = [
     ],
     bg: "linear-gradient(135deg,#e4e4df,#d0d0c8)",
     accent: "#5f5e5a",
-    desc: "ミニマルなデザインのECサイト。スムーズなアニメーションと直感的なカート操作で、購買体験を向上させています。",
+    desc: "大阪万博のセブンイレブン未来型店舗特設サイトです。デザインとコーディングを担当しています。アニメーションを使用してリッチなサイトにしています。",
+    tags: ["JavaScript"],
+    features: [
+      { icon: "ti-device-desktop", label: "レスポンシブ" }
+    ],
+    url: "#"
+  },
+  {
+    title: "セブンイレブン 麺フェスページ",
+    tag: "LP",
+    icon: "ti-users",
+    thumb: "images/thumb_04.webp",
+    thumbs: [
+      "images/detail_4_1.webp",
+      "images/detail_4_2.webp",
+      "images/detail_4_3.webp"
+    ],
+    bg: "linear-gradient(135deg,#e0e0da,#ccccc4)",
+    accent: "#444441",
+    desc: "セブンイレブン麺フェスページです。デザインとコーディングを担当しています。煙の表現にこだわったサイトとなっています。",
+    tags: ["JavaScript"],
+    features: [
+      { icon: "ti-device-desktop", label: "レスポンシブ" }
+    ],
+    url: "#"
+  },
+  {
+    title: "セブンイレブンx刀剣乱舞キャンペーンサイト",
+    tag: "LP",
+    icon: "ti-map",
+    thumb: "images/thumb_05.webp",
+    thumbs: [
+      "images/detail_5_1.webp",
+      "images/detail_5_2.webp"
+    ],
+    bg: "linear-gradient(135deg,#dcdcd6,#c8c8c0)",
+    accent: "#5f5e5a",
+    desc: "セブンイレブンと刀剣乱舞のコラボページです。デザインとコーディングを担当しています。アニメーションを使用してリッチなサイトにしています。",
     tags: ["JavaScript"],
     features: [
     ],
-    url: ""
-  },
-  {
-    title: "Pulse Social",
-    tag: "Social Platform",
-    icon: "ti-users",
-    thumb: "images/pulse-social.png",
-    bg: "linear-gradient(135deg,#e0e0da,#ccccc4)",
-    accent: "#444441",
-    desc: "クリエイター向けのミニマルなSNSプラットフォーム。投稿、フォロー、リアルタイム通知機能を持つフルスタックアプリケーション。",
-    tags: ["Next.js", "Firebase", "Tailwind"],
-    features: [
-      { icon: "ti-bell", label: "リアルタイム通知" },
-      { icon: "ti-photo", label: "メディア投稿" },
-      { icon: "ti-message", label: "DM機能" },
-      { icon: "ti-hash", label: "ハッシュタグ" }
-    ],
     url: "#"
   },
   {
-    title: "Atlas Maps",
-    tag: "Geospatial",
-    icon: "ti-map",
-    thumb: "images/atlas-maps.png",
-    bg: "linear-gradient(135deg,#dcdcd6,#c8c8c0)",
-    accent: "#5f5e5a",
-    desc: "地図データをインタラクティブに探索できるWebアプリ。MapboxとGeoJSONを活用し、データドリブンな地理情報を視覚化します。",
-    tags: ["JavaScript", "Mapbox", "GeoJSON"],
-    features: [
-      { icon: "ti-location", label: "ジオコーディング" },
-      { icon: "ti-layers-difference", label: "レイヤー管理" },
-      { icon: "ti-zoom-in", label: "ズーム・パン" },
-      { icon: "ti-download", label: "データエクスポート" }
-    ],
-    url: "#"
-  },
-  {
-    title: "Rhythm App",
-    tag: "Music & Audio",
+    title: "TOYOTA クラウン50周年サイト",
+    tag: "LP",
     icon: "ti-music",
-    thumb: "images/rhythm-app.png",
+    thumb: "images/thumb_06.webp",
+    thumbs: [
+      "images/detail_6_1.webp",
+      "images/detail_6_2.webp",
+      "images/detail_6_3.webp"
+    ],
     bg: "linear-gradient(135deg,#e2e2dc,#cecec6)",
     accent: "#444441",
-    desc: "Web Audio APIを駆使した音楽プレーヤー兼ビジュアライザー。波形表示とイコライザー機能を持つ没入感のある音楽体験を提供します。",
-    tags: ["Web Audio API", "Canvas", "JavaScript"],
+    desc: "20年前に手がけたFlashサイト。疑似的な3D表現で博物館を巡るような演出を実装しています。",
+    tags: ["Flash"],
     features: [
-      { icon: "ti-wave-sine", label: "波形ビジュアライザー" },
-      { icon: "ti-adjustments", label: "イコライザー" },
-      { icon: "ti-playlist", label: "プレイリスト" },
-      { icon: "ti-player-play", label: "クロスフェード" }
     ],
     url: "#"
   }
