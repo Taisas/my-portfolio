@@ -38,7 +38,7 @@ const projects = [
     ],
     bg: "linear-gradient(135deg,#e8e8e4,#d6d6d0)",
     accent: "#5f5e5a",
-    desc: "個人の紹介のためのポートフォリオサイト。スクロールに応じてエッフェクトが変わるような演出を実装しています。オーディオファイルをリアルタイムに解析して周波数とシェーダーのパラメーターを同期させています。",
+    desc: "個人の紹介のためのポートフォリオサイト。スクロールに応じてエフェクトが変わるような演出を実装しています。オーディオファイルをリアルタイムに解析して周波数とシェーダーのパラメーターを同期させています。",
     tags: ["JavaScript", "WebGL", "WebAudio API", "Webpack", "gsap"],
     features: [
       { icon: "ti-refresh", label: "リアルタイム3Dレンダリング" },
@@ -113,7 +113,7 @@ const projects = [
     ],
     bg: "linear-gradient(135deg,#dcdcd6,#c8c8c0)",
     accent: "#5f5e5a",
-    desc: "セブンイレブンと刀剣乱舞のコラボページです。デザインとコーディングを担当しています。アニメーションを使用してリッチなサイトにしています。",
+    desc: "セブンイレブンと刀剣乱舞のコラボページです。デザインとコーディングを担当しています。アニメーションを使用した桜吹雪や金屏風、筆による描画等の和の表現にこだわっています。",
     tags: ["JavaScript"],
     features: [
     ],
@@ -131,9 +131,27 @@ const projects = [
     ],
     bg: "linear-gradient(135deg,#dcdcd6,#c8c8c0)",
     accent: "#5f5e5a",
-    desc: "セブンイレブンとサンリオのコラボページです。デザインとコーディングを担当しています。アニメーションを使用してリッチなサイトにしています。",
+    desc: "セブンイレブンとサンリオのコラボページです。デザインとコーディングを担当しています。雲やキラキラ感などアニメーションを使用して可愛らしさを表現したサイトにしています。",
     tags: ["JavaScript"],
     features: [
+    ],
+    url: "#"
+  },
+  {
+    title: "3D Viewer",
+    tag: "gadget",
+    icon: "ti-map",
+    thumb: "images/thumb_08.webp",
+    thumbs: [
+      "images/detail_8_1.webp",
+      "images/detail_8_2.webp"
+    ],
+    bg: "linear-gradient(135deg,#dcdcd6,#c8c8c0)",
+    accent: "#5f5e5a",
+    desc: "メーカータイアップページ記事ページに埋め込む商品3Dビューアーです。商品の3Dモデルを360°閲覧することが出来ます。",
+    tags: ["JavaScript", "WebGl", "Three JS"],
+    features: [
+      { icon: "ti-refresh", label: "リアルタイム3Dレンダリング" }
     ],
     url: "#"
   },
