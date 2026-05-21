@@ -100,7 +100,7 @@ const projects = [
     features: [
       { icon: "ti-device-desktop", label: "レスポンシブ" }
     ],
-    url: "#"
+    url: "images/movie_4.mp4"
   },
   {
     title: "セブンイレブンx刀剣乱舞キャンペーンサイト",
@@ -178,6 +178,25 @@ const projects = [
 const grid = document.getElementById("grid");
 const overlay = document.getElementById("overlay");
 const closeBtn = document.getElementById("closeBtn");
+const videoOverlay = document.getElementById("videoOverlay");
+const videoPlayer = document.getElementById("videoPlayer");
+const videoCloseBtn = document.getElementById("videoCloseBtn");
+
+function openVideo(src) {
+  videoPlayer.src = src;
+  videoOverlay.classList.add("open");
+  videoPlayer.play();
+}
+
+function closeVideo() {
+  videoOverlay.classList.remove("open");
+  videoPlayer.pause();
+  videoPlayer.src = "";
+}
+
+videoCloseBtn.addEventListener("click", closeVideo);
+videoOverlay.addEventListener("click", e => { if (e.target === videoOverlay) closeVideo(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeVideo(); });
 
 function createThumbContent(p) {
   if (p.thumb) {
@@ -256,11 +275,20 @@ function openModal(p) {
     `<div class="feature-item"><i class="ti ${f.icon}" aria-hidden="true"></i>${f.label}</div>`
   ).join("");
   const mLink = document.getElementById("mLink");
-  if (p.url && p.url !== "#") {
-    mLink.href = p.url;
+  const isVideo = p.url && p.url.endsWith(".mp4");
+  if (isVideo) {
+    mLink.removeAttribute("href");
+    mLink.innerHTML = `<i class="ti ti-player-play" aria-hidden="true"></i> 動画を見る`;
     mLink.style.display = "";
+    mLink.onclick = (e) => { e.preventDefault(); openVideo(p.url); };
+  } else if (p.url && p.url !== "#") {
+    mLink.href = p.url;
+    mLink.innerHTML = `<i class="ti ti-external-link" aria-hidden="true"></i> サイトを見る`;
+    mLink.style.display = "";
+    mLink.onclick = null;
   } else {
     mLink.style.display = "none";
+    mLink.onclick = null;
   }
 
   overlay.classList.add("open");
