@@ -1,5 +1,5 @@
 // Password protection
-const PASSWORD = "your_password";
+const PASSWORD = "loveskomugi";
 const SESSION_KEY = "portfolio_auth";
 
 const authScreen = document.getElementById("authScreen");
@@ -117,7 +117,7 @@ const projects = [
     tags: ["JavaScript"],
     features: [
     ],
-    url: "#"
+    url: "images/movie_5.mp4"
   },
   {
     title: "セブンイレブンxサンリオキャンペーンサイト",
@@ -135,7 +135,7 @@ const projects = [
     tags: ["JavaScript"],
     features: [
     ],
-    url: "#"
+    url: "images/movie_7.mp4"
   },
   {
     title: "3D Viewer",
@@ -153,7 +153,25 @@ const projects = [
     features: [
       { icon: "ti-refresh", label: "リアルタイム3Dレンダリング" }
     ],
-    url: "#"
+    url: "images/movie_8.mp4"
+  },
+  {
+    title: "アンケートモジュール",
+    tag: "gadget",
+    icon: "ti-map",
+    thumb: "images/thumb_09.webp",
+    thumbs: [
+      "images/detail_9_1.webp",
+      "images/detail_9_2.webp",
+      "images/detail_9_3.webp"
+    ],
+    bg: "linear-gradient(135deg,#dcdcd6,#c8c8c0)",
+    accent: "#5f5e5a",
+    desc: "メーカータイアップ記事ページに埋め込むアンケートモジュールです。記事下にインビューで表示されアニメーションを使用することで回答がスムーズに進むような作りになっています。aws s3に格納されたcsvログデータをgasで読み込みレポート閲覧まで対応しています。",
+    tags: ["JavaScript", "aws", "gas"],
+    features: [
+    ],
+    url: "images/movie_9.mp4"
   },
   {
     title: "TOYOTA クラウン50周年サイト",
