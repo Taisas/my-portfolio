@@ -16,8 +16,9 @@ my-portfolio/
 ├── js/
 │   └── main.js              # プロジェクトデータ・インタラクション処理
 ├── images/
-│   ├── thumb_01〜06.webp    # カードサムネイル画像
+│   ├── thumb_*.webp         # カードサムネイル画像
 │   ├── detail_*_*.webp      # モーダルカルーセル用詳細画像
+│   ├── movie_*.mp4          # 動画ファイル（ffmpegで圧縮済み）
 │   └── .gitkeep
 └── .gitignore               # .DS_Store を除外
 ```
@@ -32,7 +33,7 @@ my-portfolio/
 - パスワードは `js/main.js` 冒頭の `PASSWORD` 定数で変更可能
 
 ```js
-const PASSWORD = "your_password";
+const PASSWORD = "loveskomugi"; // js/main.js 冒頭で変更可能
 ```
 
 ### 全体背景
@@ -61,6 +62,29 @@ thumbs: [
   "images/detail_1_2.webp",
   "images/detail_1_3.webp"
 ]
+```
+
+### 動画再生（mp4対応）
+- `url` が `.mp4` で終わる場合、モーダル内のボタンが「動画を見る」に切り替わる
+- クリックするとモーダルより上のレイヤー（z-index: 300）に動画プレイヤーが表示される
+- 閉じ方：✕ボタン／背景クリック／Escキー（閉じると同時に再生も停止）
+
+```js
+// 動画の設定例
+url: "images/movie_4.mp4"
+```
+
+### 動画圧縮（ffmpeg）
+- 元の高解像度動画（`*l.mp4` / `*l.mov`）を ffmpeg で圧縮して `images/` に格納
+- 解像度を半分・30fps・CRF 26 に統一することでファイルサイズを大幅削減
+
+```bash
+ffmpeg -i images/movie_Xl.mp4 \
+  -vf "scale=1440:-2" \
+  -r 30 \
+  -c:v libx264 -crf 26 -preset fast \
+  -c:a aac -b:a 128k \
+  images/movie_X.mp4 -y
 ```
 
 ---
