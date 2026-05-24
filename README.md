@@ -33,7 +33,7 @@ my-portfolio/
 - パスワードは `js/main.js` 冒頭の `PASSWORD` 定数で変更可能
 
 ```js
-const PASSWORD = "loveskomugi"; // js/main.js 冒頭で変更可能
+const PASSWORD = "xxxxxxxxx"; // js/main.js 冒頭で変更可能
 ```
 
 ### 全体背景
