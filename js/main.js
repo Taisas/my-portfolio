@@ -81,7 +81,7 @@ const projects = [
     features: [
       { icon: "ti-device-desktop", label: "レスポンシブ" }
     ],
-    url: "#"
+    url: "images/movie_3.mp4"
   },
   {
     title: "セブンイレブン 麺フェスページ",
@@ -103,7 +103,7 @@ const projects = [
     url: "images/movie_4.mp4"
   },
   {
-    title: "セブンイレブンx刀剣乱舞キャンペーンサイト",
+    title: "セブンイレブン 刀剣乱舞キャンペーンサイト",
     tag: "LP",
     icon: "ti-map",
     thumb: "images/thumb_05.webp",
@@ -120,7 +120,7 @@ const projects = [
     url: "images/movie_5.mp4"
   },
   {
-    title: "セブンイレブンxサンリオキャンペーンサイト",
+    title: "セブンイレブン サンリオキャンペーンサイト",
     tag: "LP",
     icon: "ti-map",
     thumb: "images/thumb_07.webp",
@@ -136,6 +136,23 @@ const projects = [
     features: [
     ],
     url: "images/movie_7.mp4"
+  },
+  {
+    title: "セブンイレブン ポケモンキャンペーンサイト",
+    tag: "LP",
+    icon: "ti-map",
+    thumb: "images/thumb_12.webp",
+    thumbs: [
+      "images/detail_12_1.webp",
+      "images/detail_12_2.webp"
+    ],
+    bg: "linear-gradient(135deg,#dcdcd6,#c8c8c0)",
+    accent: "#5f5e5a",
+    desc: "セブンイレブンとポケモンのコラボページです。デザインとコーディングを担当しています。",
+    tags: ["JavaScript"],
+    features: [
+    ],
+    url: "images/movie_12.mp4"
   },
   {
     title: "3D Viewer",
@@ -172,6 +189,41 @@ const projects = [
     features: [
     ],
     url: "images/movie_9.mp4"
+  },
+    {
+    title: "リッチ広告",
+    tag: "advertisment",
+    icon: "ti-map",
+    thumb: "images/thumb_10.webp",
+    thumbs: [
+      "images/detail_10_1.webp",
+      "images/detail_10_2.webp",
+      "images/detail_10_3.webp"
+    ],
+    bg: "linear-gradient(135deg,#dcdcd6,#c8c8c0)",
+    accent: "#5f5e5a",
+    desc: "Microsoftのオンラインサービスに掲載するリッチ広告の開発を担当していました。そのデモです。",
+    tags: ["JavaScript"],
+    features: [
+    ],
+    url: "images/movie_10.mp4"
+  },
+  {
+    title: "LAZY WORKS公式サイト",
+    tag: "LP",
+    icon: "ti-map",
+    thumb: "images/thumb_11.webp",
+    thumbs: [
+      "images/detail_11_1.webp",
+      "images/detail_11_2.webp"
+    ],
+    bg: "linear-gradient(135deg,#dcdcd6,#c8c8c0)",
+    accent: "#5f5e5a",
+    desc: "20年前に手がけたLAZY WORKS社の公式サイトです。",
+    tags: ["Flash"],
+    features: [
+    ],
+    url: ""
   },
   {
     title: "TOYOTA クラウン50周年サイト",
