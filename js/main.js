@@ -103,6 +103,23 @@ const projects = [
     url: "images/movie_4.mp4"
   },
   {
+    title: "セブンイレブン 学園アイドルマスターキャンペーンサイト",
+    tag: "LP",
+    icon: "ti-map",
+    thumb: "images/thumb_13.webp",
+    thumbs: [
+      "images/detail_13_1.webp",
+      "images/detail_13_2.webp"
+    ],
+    bg: "linear-gradient(135deg,#dcdcd6,#c8c8c0)",
+    accent: "#5f5e5a",
+    desc: "セブンイレブンと学園アイドルマスターのコラボページです。デザインとコーディングを担当しています。",
+    tags: ["JavaScript"],
+    features: [
+    ],
+    url: "images/movie_13.mp4"
+  },
+  {
     title: "セブンイレブン 刀剣乱舞キャンペーンサイト",
     tag: "LP",
     icon: "ti-map",
